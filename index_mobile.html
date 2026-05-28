@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Time Tracker Mobile | visioners</title>
+    <link rel="stylesheet" href="style_mobile.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>⏱️ Time Tracker</h1>
+            <p>visioners — учёт рабочего времени</p>
+        </header>
+
+        <div class="stats-card">
+            <div class="stats-label">Всего часов</div>
+            <div class="stats-hours" id="totalHours">0 ч</div>
+        </div>
+
+        <div class="form-card">
+            <div class="form-title">➕ Новая запись</div>
+            
+            <select id="employeeSelect">
+                <option value="1">👨‍💻 Иванов Иван</option>
+                <option value="2">👨‍💼 Петров Петр</option>
+                <option value="3">👩‍💼 Сидорова Анна</option>
+                <option value="4">🧪 Козлов Дмитрий</option>
+            </select>
+            
+            <select id="projectSelect">
+                <option value="1">⚖️ Цифровое правосудие</option>
+                <option value="2">🏦 Мобильный банк РСХБ</option>
+                <option value="3">📊 Платформа аналитики X5</option>
+                <option value="4">🏢 Внутренний портал</option>
+            </select>
+            
+            <input type="number" id="hoursInput" placeholder="Часы (например, 2.5)" step="0.5" min="0.5">
+            <input type="date" id="dateInput">
+            <textarea id="descInput" rows="2" placeholder="Описание работы..."></textarea>
+            
+            <button id="addBtn">➕ Добавить</button>
+        </div>
+
+        <div class="filter-card">
+            <span class="filter-label">🔍 Фильтр:</span>
+            <select id="filterSelect">
+                <option value="all">👥 Все</option>
+                <option value="1">👨‍💻 Иванов</option>
+                <option value="2">👨‍💼 Петров</option>
+                <option value="3">👩‍💼 Сидорова</option>
+                <option value="4">🧪 Козлов</option>
+            </select>
+        </div>
+
+        <div class="records-card">
+            <div class="card-title">📋 История</div>
+            <div id="recordsList" class="records-list">
+                <div class="empty-msg">Нет записей</div>
+            </div>
+        </div>
+
+        <button id="resetBtn" class="reset-btn">🗑️ Сбросить всё</button>
+    </div>
+    <script src="script_mobile.js"></script>
+</body>
+</html>
